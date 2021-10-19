@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+#projects {
+    display: none;
+}
+
+#password p {
+    font-size: 25px;
+}
+
+#password {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+}
+
+body {
+  --block-text-color: #222;
+  --block-background-color: #fff;
+  --block-accent-color: #00ae86;
+  --block-shadow-color: #444;
+}
+
+#color {
+  background-color: "#3a5ec5";
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 1.2em;
+  margin: 0 0 3em;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+option,
+select {
+  font-size: 1.2em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 60%;
+}
+
+section {
+  width: 70%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+img {
+  max-width: 100%;
+}
+
+a,
+a:visited {
+  color: #4A89DC;
+  text-decoration: none;
+}
+
+a:hover {
+  transition: all 0.2s linear;
+  text-decoration: underline;
+}
+
+w-100 {
+  max-width: 100%;
+}
+
+footer {
+  text-align: center;
+  padding: 2px;
+  color: black;
+}
+
+.container {
+  height: 2vw;
+  position: relative;
+}
+
+.centered_block {
+  text-align: center;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+.centered {
+  max-width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  font-size: 1.6em;
+}

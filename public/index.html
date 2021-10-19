@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html itemscope itemtype="https://schema.org/WebPage" lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/blocks.css/dist/blocks.min.css"
+    />
+    <title>CFGs for days</title>
+  </head>
+  <body>
+    <div id="😎 suuuuup. it's me jenny. any issues? email me @ jlhan@stanford">
+    </div>
+    <div id="password">
+            <div id="text">
+                <p>🤫SYMSYS1 password: 🤫</p>
+                <input type="password" id="textBox" />
+                <input id="pwsubmit" type="submit" value="Enter" />
+            </div>
+            <div id="error"></div>
+        </div>
+  <div id="projects">
+    <section>
+      <div class="container"></div>
+      <div class="centered_block">
+        <h1 id="counter">🤖🧠 Fall 2021 SYMSYS1 CFGs 🧠🤖</h1>
+        <p>Check out the other grammars
+          <a href="https://twitter.com/stanfordsymsys1" target="_blank"
+            >on 🐦 twitter!</a
+          >. Also, keep in mind some of these are satire. :) 
+        </p>
+        <p>
+          Thanks to
+          <a href="https://omrelli.ug/nearley-playground/" target="_blank"
+            >Guillermo Webster for the CFG playground.</a
+          >         </p>
+        <br />
+        <h2>Choose a grammar:</h2>
+      </div>
+      <div class="centered">
+        <select class="block" id="grammarForm">
+          <optgroup label="Stanford">
+            <option value="./grammars/frat.js">1. Frat (Lucas Bosman)</option>
+          </optgroup>
+        </select>
+        <button
+          class="accent block"
+          style="--block-accent-color:#3a5ec5;"
+          id="submit"
+        >
+          Generate
+        </button>
+      </div>
+      <br />
+      <div class="centered block" id="sentencedisplay" style="display: none">
+        <h1 id="sentence"></h1>
+      </div>
+      <div class="container"></div>
+    </section>
+  </div>
+    <!--     <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js" defer></script> -->
+  </body>
+  <script src="client.js"></script>
+</html>
