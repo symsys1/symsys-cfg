@@ -1,21 +1,11 @@
-Stanford Small Talk
+Context Free Grammar Gallery
+
 ===================================
 
-This is a twitter bot that emulates the empty and superficial nature of small talk heard around the Stanford engineering quad. 
+This is a website that takes context-free grammars that students have built using this [Nearley Parser Playground](https://omrelli.ug/nearley-playground/) and uses the nearley npm package to generate sentences from each grammar.
 
-Check it out at [@stanfdsmalltalk](https://twitter.com/stanfdsmalltalk)
+I created as a gallery of student work for [this assignment](https://docs.google.com/document/d/1Ld3np4gpDrVmVDXXdS4xg0Z5-_5ICO3Rig-dVE5M-z4/edit?usp=sharing) that I also wrote for symsys1! 
 
+<img width="1335" alt="image" src="https://user-images.githubusercontent.com/26272095/137962447-b0131652-7d50-489a-b4a6-5661e362fec1.png">
 
-
-## Remixed from These Hardworking Botwiki/Botmakers
-This is a template for making creative Twitter bots with [Glitch](https://glitch.com/) and the [Twit](https://github.com/ttezel/twit) node.js library. This project requires a [paid subscription](https://glitch.com/pricing).
-For more bot starter projects on Glitch, check out [Botwiki on Glitch](https://glitch.com/botwiki).
-You can find more tutorials and open source Twitter bots on [Botwiki](https://botwiki.org). Be sure to [join Botmakers](https://botmakers.org/) and [submit your bot to Botwiki](https://botwiki.org/submit-your-bot) :-)
-- [patreon.com/botwiki](https://patreon.com/botwiki)
-- [botwiki.org/about/support-us](https://botwiki.org/about/support-us)
-
-🙇
-
-**Powered by [Glitch](https://glitch.com)**
-
-\ ゜o゜)ノ
+ty to Guillermo for the playground above and to Linus for the [blocks.css](https://thesephist.github.io/blocks.css/)
