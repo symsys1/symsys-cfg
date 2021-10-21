@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-#projects {
+/* #projects {
     display: none;
 }
 
@@ -15,7 +15,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);  
-}
+} */
 
 body {
   --block-text-color: #222;
@@ -59,7 +59,7 @@ img {
 
 a,
 a:visited {
-  color: #4A89DC;
+  color: #4a89dc;
   text-decoration: none;
 }
 
