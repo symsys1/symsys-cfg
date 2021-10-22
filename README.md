@@ -19,4 +19,4 @@ You may also want to host repo on free online IDE such as replit or glitch inste
 
 ## Credits
 
-ty to Guillermo for the playground above, the creators of the nearley package, Linus for the [blocks.css](https://thesephist.github.io/blocks.css/), and Patrick for the [text to speech api tutorial](https://www.twilio.com/blog/speech-recognition-browser-web-speech-api).
+ty to Guillermo for the playground above, the creators of the nearley package, Linus for the [blocks.css](https://thesephist.github.io/blocks.css/), and Patrick for the [text to speech api tutorial](https://www.twilio.com/blog/speech-to-text-browser-web-speech-api).
