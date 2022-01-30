@@ -2,21 +2,6 @@
   box-sizing: border-box;
 }
 
-/* #projects {
-    display: none;
-}
-
-#password p {
-    font-size: 25px;
-}
-
-#password {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);  
-} */
-
 body {
   --block-text-color: #222;
   --block-background-color: #fff;
@@ -89,6 +74,16 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
+#centered_list {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  min-height: 200px;
+}
+
 .centered {
   max-width: 100%;
   text-align: center;
