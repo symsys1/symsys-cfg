@@ -8,13 +8,13 @@
   },
   "dependencies": {
     "cron": "^1.8.2",
-    "express": "^4.17.1",
-    "nearley": "^2.19.7",
+    "express": "^4.17.2",
+    "nearley": "^2.20.1",
     "randexp": "^0.5.3",
     "twit": "^2.1.0"
   },
   "engines": {
-    "node": "12.x"
+    "node": "16.x"
   },
   "repository": {
     "url": ""
