@@ -15,25 +15,48 @@
   <body>
     <div id="😎 suuuuup. it's me jenny. any issues? email me @ jlhan@stanford">
     </div>
+    <!-- <div id="password">
+            <div id="text">
+                <p>🤫SYMSYS1 password: 🤫</p>
+                <input type="password" id="textBox" />
+                <input id="pwsubmit" type="submit" value="Enter" />
+            </div>
+            <div id="error"></div>
+        </div> -->
+  <div id="projects">
+    <section>
       <div class="container"></div>
       <div class="centered_block">
-        <h1 id="counter">🧠🧠🧠 SYMSYS1 CFG Showcase 🧠🧠🧠</h1>
-
-        <h2>Choose a year:</h2>
-        <div id="centered_list">
-          <button id="winter2022"  class="accent block"
-          style="--block-accent-color:#b75776;" onclick="redirect('grammars.html')">Winter 2022</button>
-          <button id="fall2021" class="accent block"
-          style="--block-accent-color:#b75776;onclick="redirect('https://symsyscfg.jennylihan.repl.co/')">Fall 2021</button> 
-          <button id="winter2021" class="accent block"
-          style="--block-accent-color:#b75776; onclick="redirect('https://symsys1cfg.glitch.me/')">Winter 2021</button>
-        </div>
+        <h1 id="counter">🤖🧠 Fall 2021 SYMSYS1 CFGs 🧠🤖</h1>
+        <p>Vote on your exit ticket! Keep in mind some of these are satire. :) 
+        </p>
+        <p>
+          Thanks to
+          <a href="https://omrelli.ug/nearley-playground/" target="_blank"
+            >Guillermo Webster for the CFG playground.</a
+          >         </p>
+        <br />
+        <h2>Choose a grammar:</h2>
       </div>
+      <div class="centered">
+        <select class="block" id="grammarForm">
+            <option value="./grammars/grammar.js">Missed connections (Example CFG)</option>
+        </select>
+        <button
+          class="accent block"
+          style="--block-accent-color:#3a5ec5;"
+          id="submit"
+        >
+          Generate
+        </button>
+      </div>
+      <br />
+      <div class="centered block" id="sentencedisplay" style="display: none">
+        <h1 id="sentence"></h1>
+      </div>
+      <div class="container"></div>
+    </section>
+  </div>
   </body>
-  <script type="text/javascript">
-   let redirect = function (name) {
-        location.href = name;
-    };
-    </script>
   <script src="client.js"></script>
 </html>
