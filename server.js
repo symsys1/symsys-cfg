@@ -1,18 +1,19 @@
 /* Setting things up. */
-const express = require("express");
-const app = express();
-var bodyParser = require("body-parser");
-const port = 8000;
+const express = require('express')
+const app = express()
+var bodyParser = require('body-parser')
+const port = 3000
 app.use(express.static("public"));
 app.use(bodyParser.json());
 
-app.listen(port, () => {
-  console.log("example app listening at http://localhost:" + port);
+app.listen(port, ()=> {
+  console.log('example app listening at http://localhost:' + port)
+})
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html');
 });
 
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.html");
-});
 
 function gen(grammar, name) {
   var stack = [name];
@@ -21,9 +22,9 @@ function gen(grammar, name) {
   while (stack.length > 0 && stack.length < 200) {
     var currentname = stack.pop();
     if (typeof currentname === "string") {
-      var goodrules = grammar.ParserRules.filter(function (x) {
+      var goodrules = grammar.ParserRules.filter(function(x) {
         return x.name === currentname;
-      }).sort(function (a, b) {
+      }).sort(function(a, b) {
         return a.symbols.length - b.symbols.length;
       });
       if (goodrules.length > 0) {
@@ -53,7 +54,7 @@ function gen(grammar, name) {
 }
 // const date = new Date().toLocaleString();
 
-app.post("/clicked", (req, res) => {
+app.post('/clicked', (req, res) => {
   let grammarPath = req.body.grammarName;
   let example = gen(require(grammarPath), require(grammarPath).ParserStart);
   res.send(example);
