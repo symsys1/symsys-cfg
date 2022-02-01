@@ -1,183 +1,47 @@
 import os
 
+# code adapted from https://realpython.com/beautiful-soup-web-scraper-python/#why-scrape-the-web
+# https://stackoverflow.com/questions/54616638/download-all-pdf-files-from-a-website-using-python
+import requests
+from bs4 import BeautifulSoup
+import wget
 
-names = [
-    "Office Hours (Ben Early)",
-    "Fortune Cookies (Justeis Mae Saephan)",
-    "Music Hot Takes (Sherine ismail)",
-    "The Stanford Flaker (Ashley Dai)",
-    "The New Yorker  (Jasmine Narine)",
-    "Real Housewives of Stanford (Lily F., Grace C., and Rebecca S.)",
-    "Mansplainer (Katherine Wang, Ngoc Minh Nguyen)",
-    "Carta (Brooke Seay, Emily Dickey, Audrey Gorman)",
-    "Basketball Commentator (Karan B., Rishi A., Karan S.)",
-    "Stanford Affirmations (Abigail Maldonado and Ritwik Tati)",
-    "CFG (Jean-Peic Chou)",
-    "Matthew McConaughey (William Seymour)",
-    "Movie Trivia (Sarah Smale, Shannon Buchy)",
-    "James Bond (Jan Michael Krause)",
-    "CoupaBot (Calvin Laughlin, Peter Ling, Drew Silva)",
-    "Workaholic (Zach Benton)",
-    "Letter to Congressperson about Climate Change (Marielle Baumgartner)",
-    "Stanford Package Center (Sherwin Lai, Ashish Thakur)",
-    "? (Selina Zhang, Andrew Leonard)",
-    "Harry Potter (Raagavi Ragothaman)",
-    "YouTuber Apology Video (Shruti Sridhar)",
-    "College Rejection (Kyra K., Jordan D., Hannah B.)",
-    "? (Michael B., Symantha H., Chloe S.)",
-    "TSA Worker Dialogue! (Meredith C., Emmanuella T., and Kendall T.)",
-    "Gollum (Bailey Parsons, Joshua Karty, Caelan Koch)",
-    "Pickup lines (Hiroto Yamamoto, Sky Noh)",
-    "Gollum (Bailey Parsons, Joshua Karty, Caelan Koch)",
-    "MTL Sad News (Carolyn Qu, Nazanin Soltan, Jenna Mansueto)",
-    "Stanford First Quarter Frosh (Jiawei Huang, Maya Czeneszew)",
-    "FlirtAtStanford (Audrey Kwan, Christina Walton, Hollis du Pont)",
-    "Molly 2.0 (Isabelle Pilson, Molly Redgrove, Rose Winter)",
-    "Squidward (Lavender Chen, Yoonjoo Hwang)",
-    "Squid Game Contestants (Alan Zhang, Joey Ji)",
-    "Stanford Acapella Auditionee Bot (Eric Hatch, Gayatridevi Kamat Tarcar, Zoey Hu)",
-    "Icebreaker (Casey Manning)",
-    "SLErson (Sean Cameron)",
-    "Among Us (Ananya Kapoor, Jennifer Xiong)",
-    "Stanford ReviewCourses (Christy Wang, Caroline Berg)",
-    "Pitbull (Ashna Khetan, Nathalie del Valle)",
-    "SHAGGY (Xander Hnasko)",
-    "Overdramatic Inspiration (Noah Lowe)",
-    "Frat Speak (Thomas Boyden, Jude Reiferson, Cole Sprout)",
-    "Frat Bros: Thomas Boyden, Jude Reiferson, Cole Sprout",
-    "Stanford Admissions Essay Prompt (Sarah Bloom)",
-    "Meeting a Stanford Gapper (Charlotte Maguy, Avery Watkins)",
-    "Ray Hudson Grammar (Connor Evans, Keegan Hughes, Eliot Jones",
-    "Boba Shop Talk (Kiara Fufunan, Lee Xiong)",
-    "Politician Promises (Jack Morris)",
-    "Stanford Student Athlete (Jonathan Affeld, Sam Sternfels, Michaela Edwards)",
-    "Stanford Affirmations (Shreya Ghaie, Ayesha Dhall)",
-    "Applying to College Subreddit (Mai Hoang)",
-    "Drake (Ore Popoola)",
-    "West LA kid (Chelsea Cho)",
-    "Haiku Bot (Lila Shroff, Nathanael Cadicamo)",
-    "Motivational Quotes (Adam Sun, Nicole Garcia, Sofia Kim)",
-    "Granola (Leyla Kursat)",
-    "Frat Bro (Alina Davison)",
-    "Mindful Meditations (Lauren Seu)",
-    "STEM kids in Humanities (Maitri Paul)",
-    "Valley Girl(Daniel Fein, Gabriela Aranguiz-Dias, Yash Dalmia)",
-    "Californians (Easha Nandyala, Emily Chen)",
-    "Kevin from the Office (Renee White, Lily Loughridge, Vivian Wang",
-    "Mom (Julia Canez, August Burton, Uttam Shrestha)",
-    "Covid Speaker (Mishika Govil, Leo Jerome Rossitter)",
-    "Frat Boy Speak (David Mazouz, Jonathan Laderman, Tomas Cortes)",
-    "Coupa Cafe Conversations (Grace Austin, Anuka Mohanpuhr, Berta Puig)",
-    "Bro Country Singer (Katie Pieschala)",
-    "Stanford Pick-Up Lines (Katelyn Chan, Richard Aaron Libed)",
-    "Daily (Grace Carroll)",
-    "Sorority Bot (Caroline Schurz)",
-    "? (Andrew Gerges & Emma Rehac)",
-    "Overheard at Dunder Mifflin (Maya Patel)",
-    "Discussion Post Generator (Bennett Liu, Katelyn Osuna, Anya Hooper)",
-    "College party (Alexis Perez)",
-    "Love-seeker (Madison Fan, Xingyu Chi)",
-    "Taco Bell Worker (Fatoumata Binta Barrie, Kaela Verner, and Bianca Rodriguez)",
-    "We're Not Really Strangers (Nicholas Mullins)",
-    "LinkedIn Bot (Ben Tripp, Sam Roberts)",
-    "Donald Trump (Daniel Kim)",
-    "Yoda Sentences (Hoden Abdi-Yusuf)",
-    "AstroBot (Salma Elkhaoudi)",
-    "Office Hours (Ben Early)",
-    "Diary Entries from a Murakami Narrator (Eliza Lajoie) ",
-    "Hogwarts Students (Grant Bishko)",
-    "Hogwarts Students (Grant Bishko)",
-    "CS Students (Jackson Domurad)",
-    "Chad Chaddington (Darren Hall, Amarissa Joy)",
-    "Sports Commentary (Rohan Davidi, Sathvik Nallamalli)",
-    "Cereal Monster (Jason Amsler, Melany Herrejon)",
-    "Stanford Buzz Bot (Collin Jung, Dylan Momoday-Leight, Aurora Roghair)",
-    "John Mulaney (Alison Rogers)",
-    "Monsieur Gustave (Alex Zhai)",
-    "Kudos (Iris Fu, Yubin Jee)",
-    "Kudos (Iris Fu, Yubin Jee) updated",
-    "Bay Area Person at Party (Fatima Lopez, Adam Avecedo, Gracemary Nganga)",
-    "Great British Baking Show (Maddy S., Mathilda K.)",
-    "Pick Up Lines (Emma Morris and Serena Turner)",
-    "Baddie (Rachel Clinton, Stephanie Tena-Meza, Caitlan Nockideneh)",
-    "Shakespeare Grammar (Ryan Finley, Katherine Finley)",
-    "Jacob Collier CFG (Nathan Sariowan)",
-    "Stan Twitter (Paolo Tayag)",
-    "Finance Person (Julius)",
-    "JT (Floranne Carroll, Lauren Indart)",
-    "Art Student (Cole Pierce, Ethan Hellman, Clarice Hu)",
-    "? (Emmanuel Corona)",
-    "Kanye (Diego Valdez Duran, Nowali Ayelework)",
-    "Mean Jamba Customer (Ben Gonzalez)",
-    "John (Erica Okine)",
-    "Samuel L Jackson (Kacey Logan)",
-    "Stanford RA's (Sophie and Kate)",
-    "Football Talk (Jake Hornibrook, Drake Nugent, Colby Bowman)",
-    "Inspiration (Nikita Bhardwaj, Dev Joshi)",
-    "Inspiration (Nikita Bhardwaj, Dev Joshi)",
-    "Boyfriend Bot (Lorenzo Del Rosario, Madeleine Salem)",
-    "Hermione (Janice Li, Jessica Zhang, Michael Mendoza)",
-    "Kanye West Tweet (Kaavya Pichai, Dalynn Miller)",
-    "Zapata Clique (Yuliana Ramirez)",
-    "Gordon Ramsay (Sasankh Munukutla and Raymond Yao)",
-    "Kanye CFG (Nolawi Ayelework, Diego Adrian Valdez Duran)",
-    "? (Veronica Ayala)",
-    "Dining Halls (Jeong Shin, Sam Catania, Janelle Cheung)",
-    "MedicalSayings (Sheena Lai, Zhixin Wu)",
-    "Hyde Park Lingo (Adi Badlani, Aanika Atluri)",
-    "Spongebob (Jocelyn Wilmore)",
-    "Art Critic (Alexander Waitz)",
-    "VolleyTalk(Christopher Kelly, Luke Turner)",
-    "? (Isaac Kandil)",
-    "? (Leo Jacoby)",
-    "Gollum (Anna-Luisa)",
-    "Positivity Spreader (Sophia McMahon)",
-    "NSO( Gabriel Wairagu)",
-    "Naruto (Zakria)",
-    "Kanye West (Uche Ochuba)",
-    "Truth in Aspect Astrology (Armaan Rashid)",
-    "HS Debater (Juliana Ma)",
-    "Crush (Lena Lee)",
-    "Live chat assistant(Tommy Troy)",
-    "Forever 21 Salesperson (Julia Shaw, Emma Shaw)",
-    "Apple Maps Siri (Alexis Vasquez)",
-    "Music(Kyran Romero)",
-    "? (Emily Rinehart, Noelle Andrew)",
-    "? (Justin Dea-Mattson, Elisa Rivas)",
-    "Test (Test, Test)",
-    "Frat Guy (Matthew Reed, Kayson Hansen)",
-    "Shakespeare (Katherine Finley, Ryan Finley)",
-    "The Bachelor (Liz Shah, Andrew Franks)",
-    "Frat (Lucas Bosman)",
-    "Californians (Emily Chen, Easha Nandyala)",
-    "Molly Machine (Isabelle pilson, molly redgrove, rose winter)",
-    "Healthy Reminders (Ruth Ling)",
-    "Marine Corps Drill Instructor (Austin Salcedo)",
-    "School Email (Sam Prieto Serrano, Keitany Alison Jelegat)"
-]
+# grab html from cs278
+url = "box.html"
+page = open(url)
+soup = BeautifulSoup(page.read())
+soup.prettify()
+# get links for the pdfs from the html
+# use either requests or wget to download pdf
+# for link in results.find_all('a'):
+mydivs = soup.find_all(
+    "div", {"class": "ReactVirtualized__Table__row"})
 
+#     if(link['href'].endswith('pdf')):
+#         try:
+#             wget.download(url)
+#         except:
+#             print(" \n \n Unable to Download A File \n")
 
-def generate():
-    for i in range(len(names)):
-        istr = str(i + 11)
-        if i < 89:
-            istr = '0' + istr
-        print("<option value='./grammar/" + istr + ".js'>" +
-              istr + ". " + names[i] + "</option>")
+# def generate():
+#     for i in range(len(names)):
+#         istr = str(i + 11)
+#         if i < 89:
+#             istr = '0' + istr
+#         print("<option value='./grammar/" + istr + ".js'>" +
+#               istr + ". " + names[i] + "</option>")
 
-
-def rename():
-    i = 0
-    for file in sorted(os.listdir("./fall2021test")):
-        istr = str(i)
-        if i < 100:
-            istr = '0' + istr
-        if i < 10:
-            istr = '0' + istr
-        print(file)
-        os.rename("./fall2021test/" + file, "./fall2021test/" + istr + ".js")
-        i += 1
-
+# def rename():
+#     i = 0
+#     for file in sorted(os.listdir("./fall2021test")):
+#         istr = str(i)
+#         if i < 100:
+#             istr = '0' + istr
+#         if i < 10:
+#             istr = '0' + istr
+#         print(file)
+#         os.rename("./fall2021test/" + file, "./fall2021test/" + istr + ".js")
+#         i += 1
 
 # rename()
-generate()
+# generate()

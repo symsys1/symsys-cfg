@@ -1,0 +1,88 @@
+// Generated automatically by nearley, version undefined
+// http://github.com/Hardmath123/nearley
+(function () {
+function id(x) { return x[0]; }
+var grammar = {
+    Lexer: undefined,
+    ParserRules: [
+    {"name": "MAIN", "symbols": ["SENTENCE", {"literal":".","pos":6}]},
+    {"name": "MAIN", "symbols": ["QUESTION", {"literal":"?","pos":12}]},
+    {"name": "QUESTION$string$1", "symbols": [{"literal":"H"}, {"literal":"o"}, {"literal":"w"}, {"literal":" "}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "QUESTION$string$2", "symbols": [{"literal":" "}, {"literal":"w"}, {"literal":"a"}, {"literal":"s"}, {"literal":" "}, {"literal":"y"}, {"literal":"o"}, {"literal":"u"}, {"literal":"r"}, {"literal":" "}, {"literal":"d"}, {"literal":"a"}, {"literal":"y"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "QUESTION", "symbols": ["QUESTION$string$1", "ADJECTIVE", "QUESTION$string$2"]},
+    {"name": "SENTENCE$string$1", "symbols": [{"literal":"t"}, {"literal":"o"}, {"literal":"o"}, {"literal":" "}, {"literal":"s"}, {"literal":"a"}, {"literal":"d"}, {"literal":" "}, {"literal":"t"}, {"literal":"o"}, {"literal":" "}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SENTENCE", "symbols": ["SUBJECT_BE", "SENTENCE$string$1", "HAPPY_VERB"]},
+    {"name": "SENTENCE$string$2", "symbols": [{"literal":" "}, {"literal":"h"}, {"literal":"e"}, {"literal":"l"}, {"literal":"p"}, {"literal":"s"}, {"literal":" "}, {"literal":"m"}, {"literal":"e"}, {"literal":" "}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SENTENCE", "symbols": ["SAD_GERUND", "SENTENCE$string$2", "VERB"]},
+    {"name": "SENTENCE$string$3", "symbols": [{"literal":" "}, {"literal":"h"}, {"literal":"a"}, {"literal":"d"}, {"literal":" "}, {"literal":"a"}, {"literal":" "}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SENTENCE$string$4", "symbols": [{"literal":" "}, {"literal":"d"}, {"literal":"a"}, {"literal":"y"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SENTENCE", "symbols": ["SUBJECT", "SENTENCE$string$3", "ADJECTIVE", "SENTENCE$string$4"]},
+    {"name": "SENTENCE$string$5", "symbols": [{"literal":"."}, {"literal":"."}, {"literal":"."}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SENTENCE", "symbols": ["MOAN", "SENTENCE$string$5", "SENTENCE"]},
+    {"name": "MOAN$string$1", "symbols": [{"literal":"A"}, {"literal":"w"}, {"literal":"w"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "MOAN", "symbols": ["MOAN$string$1"]},
+    {"name": "MOAN$string$2", "symbols": [{"literal":"O"}, {"literal":"h"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "MOAN", "symbols": ["MOAN$string$2"]},
+    {"name": "ADJECTIVE$string$1", "symbols": [{"literal":"b"}, {"literal":"a"}, {"literal":"d"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "ADJECTIVE", "symbols": ["ADJECTIVE$string$1"]},
+    {"name": "ADJECTIVE$string$2", "symbols": [{"literal":"s"}, {"literal":"a"}, {"literal":"d"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "ADJECTIVE", "symbols": ["ADJECTIVE$string$2"]},
+    {"name": "ADJECTIVE$string$3", "symbols": [{"literal":"p"}, {"literal":"a"}, {"literal":"i"}, {"literal":"n"}, {"literal":"f"}, {"literal":"u"}, {"literal":"l"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "ADJECTIVE", "symbols": ["ADJECTIVE$string$3"]},
+    {"name": "ADJECTIVE$string$4", "symbols": [{"literal":"d"}, {"literal":"i"}, {"literal":"s"}, {"literal":"t"}, {"literal":"r"}, {"literal":"e"}, {"literal":"s"}, {"literal":"s"}, {"literal":"i"}, {"literal":"n"}, {"literal":"g"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "ADJECTIVE", "symbols": ["ADJECTIVE$string$4"]},
+    {"name": "ADJECTIVE$string$5", "symbols": [{"literal":"h"}, {"literal":"e"}, {"literal":"a"}, {"literal":"r"}, {"literal":"t"}, {"literal":"b"}, {"literal":"r"}, {"literal":"e"}, {"literal":"a"}, {"literal":"k"}, {"literal":"i"}, {"literal":"n"}, {"literal":"g"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "ADJECTIVE", "symbols": ["ADJECTIVE$string$5"]},
+    {"name": "ADJECTIVE", "symbols": ["ADVERB", {"literal":" ","pos":95}, "ADJECTIVE"]},
+    {"name": "ADVERB$string$1", "symbols": [{"literal":"t"}, {"literal":"r"}, {"literal":"a"}, {"literal":"g"}, {"literal":"i"}, {"literal":"c"}, {"literal":"a"}, {"literal":"l"}, {"literal":"l"}, {"literal":"y"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "ADVERB", "symbols": ["ADVERB$string$1"]},
+    {"name": "ADVERB$string$2", "symbols": [{"literal":"d"}, {"literal":"e"}, {"literal":"p"}, {"literal":"r"}, {"literal":"e"}, {"literal":"s"}, {"literal":"s"}, {"literal":"i"}, {"literal":"n"}, {"literal":"g"}, {"literal":"l"}, {"literal":"y"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "ADVERB", "symbols": ["ADVERB$string$2"]},
+    {"name": "ADVERB$string$3", "symbols": [{"literal":"i"}, {"literal":"n"}, {"literal":"c"}, {"literal":"r"}, {"literal":"e"}, {"literal":"d"}, {"literal":"i"}, {"literal":"b"}, {"literal":"l"}, {"literal":"y"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "ADVERB", "symbols": ["ADVERB$string$3"]},
+    {"name": "SUBJECT", "symbols": ["I_SUBJECT"]},
+    {"name": "SUBJECT", "symbols": ["PERSON_SUBJECT"]},
+    {"name": "I_SUBJECT", "symbols": [{"literal":"I","pos":127}]},
+    {"name": "PERSON_SUBJECT$string$1", "symbols": [{"literal":"A"}, {"literal":"l"}, {"literal":"e"}, {"literal":"x"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "PERSON_SUBJECT", "symbols": ["PERSON_SUBJECT$string$1"]},
+    {"name": "PERSON_SUBJECT$string$2", "symbols": [{"literal":"D"}, {"literal":"i"}, {"literal":"d"}, {"literal":"i"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "PERSON_SUBJECT", "symbols": ["PERSON_SUBJECT$string$2"]},
+    {"name": "PERSON_SUBJECT$string$3", "symbols": [{"literal":"H"}, {"literal":"a"}, {"literal":"g"}, {"literal":"a"}, {"literal":"r"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "PERSON_SUBJECT", "symbols": ["PERSON_SUBJECT$string$3"]},
+    {"name": "SUBJECT_BE$string$1", "symbols": [{"literal":" "}, {"literal":"a"}, {"literal":"m"}, {"literal":" "}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SUBJECT_BE", "symbols": ["I_SUBJECT", "SUBJECT_BE$string$1"]},
+    {"name": "SUBJECT_BE$string$2", "symbols": [{"literal":" "}, {"literal":"i"}, {"literal":"s"}, {"literal":" "}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SUBJECT_BE", "symbols": ["PERSON_SUBJECT", "SUBJECT_BE$string$2"]},
+    {"name": "VERB", "symbols": ["HAPPY_VERB"]},
+    {"name": "VERB", "symbols": ["SAD_VERB"]},
+    {"name": "HAPPY_VERB$string$1", "symbols": [{"literal":"w"}, {"literal":"a"}, {"literal":"l"}, {"literal":"k"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "HAPPY_VERB", "symbols": ["HAPPY_VERB$string$1"]},
+    {"name": "HAPPY_VERB$string$2", "symbols": [{"literal":"s"}, {"literal":"m"}, {"literal":"i"}, {"literal":"l"}, {"literal":"e"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "HAPPY_VERB", "symbols": ["HAPPY_VERB$string$2"]},
+    {"name": "HAPPY_VERB$string$3", "symbols": [{"literal":"e"}, {"literal":"a"}, {"literal":"t"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "HAPPY_VERB", "symbols": ["HAPPY_VERB$string$3"]},
+    {"name": "HAPPY_VERB$string$4", "symbols": [{"literal":"w"}, {"literal":"a"}, {"literal":"l"}, {"literal":"k"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "HAPPY_VERB", "symbols": ["HAPPY_VERB$string$4"]},
+    {"name": "HAPPY_VERB$string$5", "symbols": [{"literal":"s"}, {"literal":"u"}, {"literal":"r"}, {"literal":"v"}, {"literal":"i"}, {"literal":"v"}, {"literal":"e"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "HAPPY_VERB", "symbols": ["HAPPY_VERB$string$5"]},
+    {"name": "SAD_VERB$string$1", "symbols": [{"literal":"c"}, {"literal":"r"}, {"literal":"y"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SAD_VERB", "symbols": ["SAD_VERB$string$1"]},
+    {"name": "SAD_VERB$string$2", "symbols": [{"literal":"w"}, {"literal":"h"}, {"literal":"i"}, {"literal":"m"}, {"literal":"p"}, {"literal":"e"}, {"literal":"r"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SAD_VERB", "symbols": ["SAD_VERB$string$2"]},
+    {"name": "SAD_VERB$string$3", "symbols": [{"literal":"m"}, {"literal":"o"}, {"literal":"u"}, {"literal":"r"}, {"literal":"n"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SAD_VERB", "symbols": ["SAD_VERB$string$3"]},
+    {"name": "SAD_VERB$string$4", "symbols": [{"literal":"m"}, {"literal":"o"}, {"literal":"a"}, {"literal":"n"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SAD_VERB", "symbols": ["SAD_VERB$string$4"]},
+    {"name": "SAD_VERB$string$5", "symbols": [{"literal":"r"}, {"literal":"e"}, {"literal":"f"}, {"literal":"l"}, {"literal":"e"}, {"literal":"c"}, {"literal":"t"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SAD_VERB", "symbols": ["SAD_VERB$string$5"]},
+    {"name": "SAD_GERUND$string$1", "symbols": [{"literal":"i"}, {"literal":"n"}, {"literal":"g"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SAD_GERUND", "symbols": ["SAD_VERB", "SAD_GERUND$string$1"]}
+]
+  , ParserStart: "MAIN"
+}
+if (typeof module !== 'undefined'&& typeof module.exports !== 'undefined') {
+   module.exports = grammar;
+} else {
+   window.grammar = grammar;
+}
+})();
