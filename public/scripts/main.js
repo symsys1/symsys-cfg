@@ -1,12 +1,14 @@
 //import json file with the filenames
 requirejs(["grammars"], function () {
   let grammarForm = document.getElementById("grammarForm");
-  grammars.forEach((o) => {
-    let opt = document.createElement("option");
-    opt.value = o.fileName;
-    opt.textContent = o.name;
-    grammarForm.appendChild(opt);
-  });
+  if (grammarForm.children.length <= 1) {
+    grammars.forEach((o) => {
+      let opt = document.createElement("option");
+      opt.value = o.fileName;
+      opt.textContent = o.name;
+      grammarForm.appendChild(opt);
+    });
+  }
 });
 
 let selected = "./grammars/Aaron_Jack.js";
