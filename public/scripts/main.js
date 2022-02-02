@@ -1,23 +1,13 @@
 //import json file with the filenames
-requirejs(["grammars"], function () {
-  let grammarForm = document.getElementById("grammarForm");
-  if (grammarForm.children.length <= 1) {
-    grammars.forEach((o) => {
-      let opt = document.createElement("option");
-      opt.value = o.fileName;
-      opt.textContent = o.name;
-      grammarForm.appendChild(opt);
-    });
-  }
-});
 
-let selected = "./grammars/Aaron_Jack.js";
+console.log("Client-side code running");
+var selected = "./grammars/Aaron_Jack.js";
 
 function grammarSelected(e) {
   selected = e.target.value;
 }
 
-let grammarSelect = document.querySelector("#grammarForm");
+var grammarSelect = document.getElementById("grammarForm");
 grammarSelect.addEventListener("input", grammarSelected);
 
 const button = document.getElementById("submit");

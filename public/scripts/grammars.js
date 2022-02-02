@@ -460,3 +460,11 @@ var grammars = [
     fileName: "./grammars/Ulises Medina.js",
   },
 ];
+
+let grammarForm = document.getElementById("grammarForm");
+grammars.forEach((o) => {
+  let opt = document.createElement("option");
+  opt.value = o.fileName;
+  opt.textContent = o.name;
+  grammarForm.appendChild(opt);
+});
