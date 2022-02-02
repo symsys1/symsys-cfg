@@ -41,7 +41,7 @@ button.addEventListener("click", function (e) {
     .then(function (response) {
       return response.text().then(function (text) {
         console.log("Click was recorded");
-        document.getElementById("sentence").innerText = text;
+        document.getElementById("sentence").innerHTML = text;
         document.getElementById("sentencedisplay").style.display = "block";
         say(text);
       });
