@@ -344,8 +344,8 @@ var grammars = [
     fileName: "./grammars/LianElizabeth.js",
   },
   {
-    name: "87. Persis COVID Email (Damanpreet Singh",
-    fileName: "Jawad Imad Jafar",
+    name: "87. Persis COVID Email (Damanpreet S., Jawad J., Linda L.)",
+    fileName: "./grammars/Linda, Jawad, Damanpreet.js",
   },
   {
     name: "88. LSJUMB (Steven G. Opferman)",
