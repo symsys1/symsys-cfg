@@ -144,7 +144,7 @@ var grammars = [
     fileName: "./grammars/Cassady.js",
   },
   {
-    name: "38.  (Cass Kramer)",
+    name: "38. Diner Talk (Cass Kramer)",
     fileName: "./grammars/CassK.js",
   },
   {

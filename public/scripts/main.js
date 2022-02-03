@@ -15,7 +15,7 @@ let utterance;
 
 function say(text) {
   utterance = new SpeechSynthesisUtterance(text);
-  utterance.voice = speechSynthesis.getVoices()[33];
+  utterance.voice = speechSynthesis.getVoices()[0];
   speechSynthesis.speak(utterance);
 }
 
