@@ -459,6 +459,10 @@ var grammars = [
     name: "115. Gamer Rage (Ulises Medina)",
     fileName: "./grammars/Ulises Medina.js",
   },
+  {
+    name: "116. Internet Speak (Deven Bansal)",
+    fileName: "./grammars/bansal.js",
+  },
 ];
 
 let grammarForm = document.getElementById("grammarForm");
