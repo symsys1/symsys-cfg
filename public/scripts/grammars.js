@@ -467,6 +467,14 @@ var grammars = [
     name: "117. Gay Vernacular 101 (Faria, Manny, Isa, Paloma)",
     fileName: "./grammars/gayvernacular.js",
   },
+  {
+    name: "118. The Grind Never Stops (Joseph Z.)",
+    fileName: "./grammars/JosephZ.js",
+  },
+  {
+    name: "119. Weaboo (Camilla P.)",
+    fileName: "./grammars/CamillaP.js",
+  },
 ];
 
 let grammarForm = document.getElementById("grammarForm");
