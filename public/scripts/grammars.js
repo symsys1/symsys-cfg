@@ -464,7 +464,7 @@ var grammars = [
     fileName: "./grammars/bansal.js",
   },
   {
-    name: "117. Gay Vernacular 101 (Faria, Manny, Isa)",
+    name: "117. Gay Vernacular 101 (Faria, Manny, Isa, Paloma)",
     fileName: "./grammars/gayvernacular.js",
   },
 ];
