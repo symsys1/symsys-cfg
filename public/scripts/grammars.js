@@ -460,8 +460,12 @@ var grammars = [
     fileName: "./grammars/Ulises Medina.js",
   },
   {
-    name: "116. Internet Speak (Deven Bansal)",
+    name: "116. Twitterspeak (Deven Bansal)",
     fileName: "./grammars/bansal.js",
+  },
+  {
+    name: "117. Gay Vernacular 101 (Faria, Manny, Isa)",
+    fileName: "./grammars/gayvernacular.js",
   },
 ];
 
