@@ -1,5 +1,4 @@
 var grammars = [
-  {name:"1. Fizz: Kirsten and Avantika", fileName:"./grammars-fall2022/Kirsten_Avantika_Fizz.js"},
   {name:"2. Koreaboo (Hannah and Hana)", fileName:"./grammars-fall2022/Hannah_Hana_Koreaboo.js"},
 
 ];
