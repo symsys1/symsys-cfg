@@ -1,0 +1,77 @@
+// Generated automatically by nearley, version undefined
+// http://github.com/Hardmath123/nearley
+(function () {
+function id(x) { return x[0]; }
+var grammar = {
+    Lexer: undefined,
+    ParserRules: [
+    {"name": "MAIN", "symbols": ["SENTENCE", {"literal":".","pos":6}]},
+    {"name": "MAIN", "symbols": ["QUESTION", {"literal":"?","pos":12}]},
+    {"name": "_", "symbols": [{"literal":" ","pos":18}]},
+    {"name": "SENTENCE$subexpression$1", "symbols": ["SUB"]},
+    {"name": "SENTENCE$subexpression$1", "symbols": ["OBJ"]},
+    {"name": "SENTENCE", "symbols": ["SENTENCE$subexpression$1", "_", "VERB"]},
+    {"name": "SENTENCE$string$1", "symbols": [{"literal":"s"}, {"literal":"a"}, {"literal":"i"}, {"literal":"d"}, {"literal":" "}, {"literal":"\""}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SENTENCE$subexpression$2", "symbols": ["SENTENCE"]},
+    {"name": "SENTENCE$subexpression$2", "symbols": ["QUESTION"]},
+    {"name": "SENTENCE", "symbols": ["SUB", "_", "SENTENCE$string$1", "SENTENCE$subexpression$2", {"literal":"\"","pos":52}]},
+    {"name": "QUESTION$string$1", "symbols": [{"literal":"i"}, {"literal":"s"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "QUESTION", "symbols": ["QUESTIONWORD", "_", "QUESTION$string$1", "_", "OBJ"]},
+    {"name": "QUESTION$string$2", "symbols": [{"literal":"a"}, {"literal":"r"}, {"literal":"e"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "QUESTION", "symbols": ["QUESTIONWORD", "_", "QUESTION$string$2", "_", "OBJS"]},
+    {"name": "QUESTION$string$3", "symbols": [{"literal":"d"}, {"literal":"o"}, {"literal":" "}, {"literal":"y"}, {"literal":"o"}, {"literal":"u"}, {"literal":" "}, {"literal":"k"}, {"literal":"n"}, {"literal":"o"}, {"literal":"w"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "QUESTION$subexpression$1", "symbols": ["OBJS"]},
+    {"name": "QUESTION$subexpression$1", "symbols": ["SUB"]},
+    {"name": "QUESTION", "symbols": ["QUESTION$string$3", "_", "QUESTIONWORD", "_", "QUESTION$subexpression$1", "_", "VERB"]},
+    {"name": "QUESTIONWORD$string$1", "symbols": [{"literal":"h"}, {"literal":"o"}, {"literal":"w"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "QUESTIONWORD", "symbols": ["QUESTIONWORD$string$1"]},
+    {"name": "QUESTIONWORD$string$2", "symbols": [{"literal":"w"}, {"literal":"h"}, {"literal":"a"}, {"literal":"t"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "QUESTIONWORD", "symbols": ["QUESTIONWORD$string$2"]},
+    {"name": "QUESTIONWORD$string$3", "symbols": [{"literal":"w"}, {"literal":"h"}, {"literal":"e"}, {"literal":"r"}, {"literal":"e"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "QUESTIONWORD", "symbols": ["QUESTIONWORD$string$3"]},
+    {"name": "SUB", "symbols": [{"literal":"I","pos":120}]},
+    {"name": "SUB$string$1", "symbols": [{"literal":"y"}, {"literal":"o"}, {"literal":"u"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SUB", "symbols": ["SUB$string$1"]},
+    {"name": "SUB$string$2", "symbols": [{"literal":"w"}, {"literal":"e"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SUB", "symbols": ["SUB$string$2"]},
+    {"name": "SUB$string$3", "symbols": [{"literal":"t"}, {"literal":"h"}, {"literal":"e"}, {"literal":"y"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SUB", "symbols": ["SUB$string$3"]},
+    {"name": "SUB$string$4", "symbols": [{"literal":"y"}, {"literal":"'"}, {"literal":"a"}, {"literal":"l"}, {"literal":"l"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SUB", "symbols": ["SUB$string$4"]},
+    {"name": "VERB$string$1", "symbols": [{"literal":"s"}, {"literal":"c"}, {"literal":"u"}, {"literal":"r"}, {"literal":"r"}, {"literal":"i"}, {"literal":"e"}, {"literal":"d"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "VERB", "symbols": ["VERB$string$1"]},
+    {"name": "VERB$string$2", "symbols": [{"literal":"r"}, {"literal":"a"}, {"literal":"n"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "VERB", "symbols": ["VERB$string$2"]},
+    {"name": "VERB$string$3", "symbols": [{"literal":"a"}, {"literal":"t"}, {"literal":"e"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "VERB", "symbols": ["VERB$string$3"]},
+    {"name": "VERB$string$4", "symbols": [{"literal":"d"}, {"literal":"r"}, {"literal":"a"}, {"literal":"n"}, {"literal":"k"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "VERB", "symbols": ["VERB$string$4"]},
+    {"name": "VERB$string$5", "symbols": [{"literal":"p"}, {"literal":"o"}, {"literal":"o"}, {"literal":"p"}, {"literal":"e"}, {"literal":"d"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "VERB", "symbols": ["VERB$string$5"]},
+    {"name": "OBJ$string$1", "symbols": [{"literal":"k"}, {"literal":"i"}, {"literal":"b"}, {"literal":"b"}, {"literal":"l"}, {"literal":"e"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "OBJ", "symbols": ["OBJ$string$1"]},
+    {"name": "OBJ$string$2", "symbols": [{"literal":"t"}, {"literal":"h"}, {"literal":"e"}, {"literal":" "}, {"literal":"d"}, {"literal":"o"}, {"literal":"g"}, {"literal":" "}, {"literal":"h"}, {"literal":"o"}, {"literal":"u"}, {"literal":"s"}, {"literal":"e"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "OBJ", "symbols": ["OBJ$string$2"]},
+    {"name": "OBJ$string$3", "symbols": [{"literal":"t"}, {"literal":"h"}, {"literal":"e"}, {"literal":" "}, {"literal":"c"}, {"literal":"a"}, {"literal":"t"}, {"literal":" "}, {"literal":"d"}, {"literal":"o"}, {"literal":"o"}, {"literal":"r"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "OBJ", "symbols": ["OBJ$string$3"]},
+    {"name": "OBJ$string$4", "symbols": [{"literal":"m"}, {"literal":"i"}, {"literal":"l"}, {"literal":"k"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "OBJ", "symbols": ["OBJ$string$4"]},
+    {"name": "OBJ$string$5", "symbols": [{"literal":"t"}, {"literal":"h"}, {"literal":"e"}, {"literal":" "}, {"literal":"l"}, {"literal":"i"}, {"literal":"t"}, {"literal":"t"}, {"literal":"e"}, {"literal":"r"}, {"literal":" "}, {"literal":"b"}, {"literal":"o"}, {"literal":"x"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "OBJ", "symbols": ["OBJ$string$5"]},
+    {"name": "OBJS$string$1", "symbols": [{"literal":"t"}, {"literal":"r"}, {"literal":"e"}, {"literal":"e"}, {"literal":"s"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "OBJS", "symbols": ["OBJS$string$1"]},
+    {"name": "OBJS$string$2", "symbols": [{"literal":"b"}, {"literal":"u"}, {"literal":"t"}, {"literal":"t"}, {"literal":"e"}, {"literal":"r"}, {"literal":"f"}, {"literal":"l"}, {"literal":"i"}, {"literal":"e"}, {"literal":"s"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "OBJS", "symbols": ["OBJS$string$2"]},
+    {"name": "OBJS$string$3", "symbols": [{"literal":"t"}, {"literal":"e"}, {"literal":"n"}, {"literal":"n"}, {"literal":"i"}, {"literal":"s"}, {"literal":" "}, {"literal":"b"}, {"literal":"a"}, {"literal":"l"}, {"literal":"l"}, {"literal":"s"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "OBJS", "symbols": ["OBJS$string$3"]},
+    {"name": "OBJS$string$4", "symbols": [{"literal":"s"}, {"literal":"q"}, {"literal":"u"}, {"literal":"e"}, {"literal":"a"}, {"literal":"k"}, {"literal":"y"}, {"literal":" "}, {"literal":"t"}, {"literal":"o"}, {"literal":"y"}, {"literal":"s"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "OBJS", "symbols": ["OBJS$string$4"]}
+]
+  , ParserStart: "MAIN"
+}
+if (typeof module !== 'undefined'&& typeof module.exports !== 'undefined') {
+   module.exports = grammar;
+} else {
+   window.grammar = grammar;
+}
+})();
