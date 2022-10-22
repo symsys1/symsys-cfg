@@ -1,0 +1,85 @@
+// Generated automatically by nearley, version undefined
+// http://github.com/Hardmath123/nearley
+(function () {
+function id(x) { return x[0]; }
+var grammar = {
+    Lexer: undefined,
+    ParserRules: [
+    {"name": "Main", "symbols": ["INQP", "_", {"literal":"?","pos":8}]},
+    {"name": "INQP", "symbols": ["INQW", "_", "TSJ", "_", "SB", "_", "SA"]},
+    {"name": "INQP$string$1", "symbols": [{"literal":"a"}, {"literal":"n"}, {"literal":"d"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "INQP", "symbols": ["INQP", "_", "INQP$string$1", "_", "INQP"]},
+    {"name": "INQP", "symbols": ["INQW", "_", "TSJ", "_", "QNST"]},
+    {"name": "INQP", "symbols": ["INQW", "_", "QNST"]},
+    {"name": "INQP", "symbols": ["INQW", "_", "SB", "_", "SA"]},
+    {"name": "FCP$string$1", "symbols": [{"literal":"h"}, {"literal":"a"}, {"literal":"n"}, {"literal":"d"}, {"literal":"y"}, {"literal":" "}, {"literal":"d"}, {"literal":"a"}, {"literal":"n"}, {"literal":"d"}, {"literal":"y"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "FCP", "symbols": ["FCP$string$1"]},
+    {"name": "FCP$string$2", "symbols": [{"literal":"w"}, {"literal":"e"}, {"literal":"i"}, {"literal":"r"}, {"literal":"d"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "FCP", "symbols": ["FCP$string$2"]},
+    {"name": "FCP$string$3", "symbols": [{"literal":"a"}, {"literal":"n"}, {"literal":"n"}, {"literal":"o"}, {"literal":"y"}, {"literal":"i"}, {"literal":"n"}, {"literal":"g"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "FCP", "symbols": ["FCP$string$3"]},
+    {"name": "FCP", "symbols": ["FCP", "_", "FC"]},
+    {"name": "INQW$string$1", "symbols": [{"literal":"W"}, {"literal":"h"}, {"literal":"a"}, {"literal":"t"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "INQW", "symbols": ["INQW$string$1"]},
+    {"name": "INQW$string$2", "symbols": [{"literal":"W"}, {"literal":"h"}, {"literal":"y"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "INQW", "symbols": ["INQW$string$2"]},
+    {"name": "INQW$string$3", "symbols": [{"literal":"H"}, {"literal":"o"}, {"literal":"w"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "INQW", "symbols": ["INQW$string$3"]},
+    {"name": "TSJ$string$1", "symbols": [{"literal":"i"}, {"literal":"n"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "TSJ", "symbols": ["TSJ$string$1", "_", "SJ"]},
+    {"name": "QNST$string$1", "symbols": [{"literal":"i"}, {"literal":"s"}, {"literal":" "}, {"literal":"t"}, {"literal":"h"}, {"literal":"a"}, {"literal":"t"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "QNST$string$2", "symbols": [{"literal":"t"}, {"literal":"h"}, {"literal":"a"}, {"literal":"n"}, {"literal":"g"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "QNST", "symbols": ["QNST$string$1", "_", "FCP", "_", "QNST$string$2"]},
+    {"name": "SJ$string$1", "symbols": [{"literal":"t"}, {"literal":"h"}, {"literal":"e"}, {"literal":" "}, {"literal":"S"}, {"literal":"a"}, {"literal":"m"}, {"literal":" "}, {"literal":"H"}, {"literal":"i"}, {"literal":"l"}, {"literal":"l"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SJ", "symbols": ["SJ$string$1"]},
+    {"name": "SJ$string$2", "symbols": [{"literal":"T"}, {"literal":"a"}, {"literal":"r"}, {"literal":"n"}, {"literal":"a"}, {"literal":"t"}, {"literal":"i"}, {"literal":"o"}, {"literal":"n"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SJ", "symbols": ["SJ$string$2"]},
+    {"name": "SJ$string$3", "symbols": [{"literal":"t"}, {"literal":"h"}, {"literal":"e"}, {"literal":" "}, {"literal":"G"}, {"literal":"o"}, {"literal":"d"}, {"literal":"d"}, {"literal":"a"}, {"literal":"m"}, {"literal":"n"}, {"literal":" "}, {"literal":"w"}, {"literal":"o"}, {"literal":"r"}, {"literal":"l"}, {"literal":"d"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SJ", "symbols": ["SJ$string$3"]},
+    {"name": "SJ$string$4", "symbols": [{"literal":"t"}, {"literal":"h"}, {"literal":"e"}, {"literal":" "}, {"literal":"g"}, {"literal":"r"}, {"literal":"e"}, {"literal":"a"}, {"literal":"t"}, {"literal":" "}, {"literal":"s"}, {"literal":"t"}, {"literal":"a"}, {"literal":"t"}, {"literal":"e"}, {"literal":" "}, {"literal":"o"}, {"literal":"f"}, {"literal":" "}, {"literal":"T"}, {"literal":"e"}, {"literal":"x"}, {"literal":"a"}, {"literal":"s"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SJ", "symbols": ["SJ$string$4"]},
+    {"name": "SJ$string$5", "symbols": [{"literal":"a"}, {"literal":"n"}, {"literal":"d"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SJ", "symbols": ["SJ", "_", "SJ$string$5", "_", "SJ"]},
+    {"name": "SB$string$1", "symbols": [{"literal":"a"}, {"literal":"r"}, {"literal":"e"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SB", "symbols": ["SB$string$1", "_", "WMFP"]},
+    {"name": "SB$string$2", "symbols": [{"literal":"i"}, {"literal":"s"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SB", "symbols": ["SB$string$2", "_", "WMFS"]},
+    {"name": "WMFP$string$1", "symbols": [{"literal":"y"}, {"literal":"’"}, {"literal":"a"}, {"literal":"l"}, {"literal":"l"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "WMFP", "symbols": ["WMFP$string$1"]},
+    {"name": "WMFP$string$2", "symbols": [{"literal":"‘"}, {"literal":"e"}, {"literal":"m"}, {"literal":" "}, {"literal":"h"}, {"literal":"o"}, {"literal":"o"}, {"literal":"l"}, {"literal":"i"}, {"literal":"g"}, {"literal":"a"}, {"literal":"n"}, {"literal":"s"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "WMFP", "symbols": ["WMFP$string$2"]},
+    {"name": "WMFS$string$1", "symbols": [{"literal":"b"}, {"literal":"u"}, {"literal":"d"}, {"literal":"d"}, {"literal":"y"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "WMFS", "symbols": ["WMFS$string$1"]},
+    {"name": "WMFS$string$2", "symbols": [{"literal":"y"}, {"literal":"e"}, {"literal":"r"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "WMFS", "symbols": ["WMFS$string$2"]},
+    {"name": "WMFS$string$3", "symbols": [{"literal":"y"}, {"literal":"o"}, {"literal":"u"}, {"literal":"’"}, {"literal":"s"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "WMFS", "symbols": ["WMFS$string$3"]},
+    {"name": "WMFS$string$4", "symbols": [{"literal":"t"}, {"literal":"h"}, {"literal":"a"}, {"literal":"t"}, {"literal":" "}, {"literal":"g"}, {"literal":"a"}, {"literal":"l"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "WMFS", "symbols": ["WMFS$string$4"]},
+    {"name": "SA$string$1", "symbols": [{"literal":"d"}, {"literal":"o"}, {"literal":"i"}, {"literal":"n"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SA", "symbols": ["SA$string$1"]},
+    {"name": "SA$string$2", "symbols": [{"literal":"g"}, {"literal":"o"}, {"literal":"i"}, {"literal":"n"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SA", "symbols": ["SA$string$2"]},
+    {"name": "SA", "symbols": ["SA", "_", "AST"]},
+    {"name": "AST$string$1", "symbols": [{"literal":"o"}, {"literal":"v"}, {"literal":"e"}, {"literal":"r"}, {"literal":" "}, {"literal":"y"}, {"literal":"o"}, {"literal":"n"}, {"literal":"d"}, {"literal":"e"}, {"literal":"r"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "AST", "symbols": ["AST$string$1"]},
+    {"name": "AST$string$2", "symbols": [{"literal":"i"}, {"literal":"n"}, {"literal":" "}, {"literal":"t"}, {"literal":"h"}, {"literal":"i"}, {"literal":"s"}, {"literal":" "}, {"literal":"n"}, {"literal":"e"}, {"literal":"c"}, {"literal":"k"}, {"literal":" "}, {"literal":"o"}, {"literal":"f"}, {"literal":" "}, {"literal":"t"}, {"literal":"h"}, {"literal":"e"}, {"literal":" "}, {"literal":"w"}, {"literal":"o"}, {"literal":"o"}, {"literal":"d"}, {"literal":"s"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "AST", "symbols": ["AST$string$2"]},
+    {"name": "FC$string$1", "symbols": [{"literal":"s"}, {"literal":"p"}, {"literal":"o"}, {"literal":"r"}, {"literal":"k"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "FC", "symbols": ["FC$string$1"]},
+    {"name": "FC$string$2", "symbols": [{"literal":"h"}, {"literal":"e"}, {"literal":"a"}, {"literal":"l"}, {"literal":"t"}, {"literal":"h"}, {"literal":"y"}, {"literal":" "}, {"literal":"t"}, {"literal":"h"}, {"literal":"i"}, {"literal":"n"}, {"literal":"g"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "FC", "symbols": ["FC$string$2"]},
+    {"name": "FC$string$3", "symbols": [{"literal":"g"}, {"literal":"u"}, {"literal":"n"}, {"literal":" "}, {"literal":"c"}, {"literal":"o"}, {"literal":"n"}, {"literal":"t"}, {"literal":"r"}, {"literal":"o"}, {"literal":"l"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "FC", "symbols": ["FC$string$3"]},
+    {"name": "FC$string$4", "symbols": [{"literal":"s"}, {"literal":"n"}, {"literal":"o"}, {"literal":"w"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "FC", "symbols": ["FC$string$4"]},
+    {"name": "_", "symbols": [{"literal":" ","pos":258}]}
+]
+  , ParserStart: "Main"
+}
+if (typeof module !== 'undefined'&& typeof module.exports !== 'undefined') {
+   module.exports = grammar;
+} else {
+   window.grammar = grammar;
+}
+})();

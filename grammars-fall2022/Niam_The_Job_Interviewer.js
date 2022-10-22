@@ -1,0 +1,88 @@
+// Generated automatically by nearley, version undefined
+// http://github.com/Hardmath123/nearley
+(function () {
+function id(x) { return x[0]; }
+var grammar = {
+    Lexer: undefined,
+    ParserRules: [
+    {"name": "MAIN", "symbols": ["QUESTION", {"literal":"?","pos":6}]},
+    {"name": "MAIN", "symbols": ["SENTENCE", {"literal":".","pos":12}]},
+    {"name": "MAIN", "symbols": ["STALL", "_", "QUESTION", {"literal":"?","pos":22}]},
+    {"name": "MAIN", "symbols": ["STALL", "_", "SENTENCE", {"literal":".","pos":32}]},
+    {"name": "_", "symbols": [{"literal":" ","pos":38}]},
+    {"name": "QUESTION$string$1", "symbols": [{"literal":"H"}, {"literal":"o"}, {"literal":"w"}, {"literal":" "}, {"literal":"d"}, {"literal":"o"}, {"literal":"e"}, {"literal":"s"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "QUESTION", "symbols": ["QUESTION$string$1", "_", "SUB", "_", "VERB", "_", "OBJ"]},
+    {"name": "QUESTION$string$2", "symbols": [{"literal":"C"}, {"literal":"a"}, {"literal":"n"}, {"literal":" "}, {"literal":"y"}, {"literal":"o"}, {"literal":"u"}, {"literal":" "}, {"literal":"e"}, {"literal":"x"}, {"literal":"p"}, {"literal":"l"}, {"literal":"a"}, {"literal":"i"}, {"literal":"n"}, {"literal":" "}, {"literal":"m"}, {"literal":"o"}, {"literal":"r"}, {"literal":"e"}, {"literal":" "}, {"literal":"a"}, {"literal":"b"}, {"literal":"o"}, {"literal":"u"}, {"literal":"t"}, {"literal":" "}, {"literal":"h"}, {"literal":"o"}, {"literal":"w"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "QUESTION", "symbols": ["QUESTION$string$2", "_", "PHRASE"]},
+    {"name": "SENTENCE$string$1", "symbols": [{"literal":"E"}, {"literal":"x"}, {"literal":"p"}, {"literal":"l"}, {"literal":"a"}, {"literal":"i"}, {"literal":"n"}, {"literal":" "}, {"literal":"h"}, {"literal":"o"}, {"literal":"w"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SENTENCE", "symbols": ["SENTENCE$string$1", "_", "PHRASE"]},
+    {"name": "SENTENCE$string$2", "symbols": [{"literal":"T"}, {"literal":"e"}, {"literal":"l"}, {"literal":"l"}, {"literal":" "}, {"literal":"m"}, {"literal":"e"}, {"literal":" "}, {"literal":"m"}, {"literal":"o"}, {"literal":"r"}, {"literal":"e"}, {"literal":" "}, {"literal":"a"}, {"literal":"b"}, {"literal":"o"}, {"literal":"u"}, {"literal":"t"}, {"literal":" "}, {"literal":"h"}, {"literal":"o"}, {"literal":"w"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SENTENCE", "symbols": ["SENTENCE$string$2", "_", "PHRASE"]},
+    {"name": "PHRASE", "symbols": ["SUB", "_", "VERB", {"literal":"s","pos":94}, "_", "OBJ"]},
+    {"name": "PHRASE", "symbols": ["SUB", "_", "VERB", {"literal":"s","pos":108}, "_", "OBJ"]},
+    {"name": "STALL$string$1", "symbols": [{"literal":"U"}, {"literal":"m"}, {"literal":"."}, {"literal":"."}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "STALL", "symbols": ["STALL$string$1"]},
+    {"name": "STALL$string$2", "symbols": [{"literal":"U"}, {"literal":"h"}, {"literal":"."}, {"literal":"."}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "STALL", "symbols": ["STALL$string$2"]},
+    {"name": "STALL$string$3", "symbols": [{"literal":"U"}, {"literal":"m"}, {"literal":"."}, {"literal":"."}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "STALL", "symbols": ["STALL$string$3", "_", "STALL"]},
+    {"name": "STALL$string$4", "symbols": [{"literal":"U"}, {"literal":"h"}, {"literal":"."}, {"literal":"."}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "STALL", "symbols": ["STALL$string$4", "_", "STALL"]},
+    {"name": "SUB$string$1", "symbols": [{"literal":"y"}, {"literal":"o"}, {"literal":"u"}, {"literal":"r"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SUB$string$2", "symbols": [{"literal":"r"}, {"literal":"e"}, {"literal":"s"}, {"literal":"u"}, {"literal":"m"}, {"literal":"e"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SUB", "symbols": ["SUB$string$1", "_", "ADJ", "_", "SUB$string$2"]},
+    {"name": "SUB$string$3", "symbols": [{"literal":"y"}, {"literal":"o"}, {"literal":"u"}, {"literal":"r"}, {"literal":" "}, {"literal":"p"}, {"literal":"r"}, {"literal":"i"}, {"literal":"o"}, {"literal":"r"}, {"literal":" "}, {"literal":"j"}, {"literal":"o"}, {"literal":"b"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SUB", "symbols": ["SUB$string$3"]},
+    {"name": "SUB$string$4", "symbols": [{"literal":"y"}, {"literal":"o"}, {"literal":"u"}, {"literal":"r"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SUB$string$5", "symbols": [{"literal":"e"}, {"literal":"x"}, {"literal":"p"}, {"literal":"e"}, {"literal":"r"}, {"literal":"i"}, {"literal":"e"}, {"literal":"n"}, {"literal":"c"}, {"literal":"e"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SUB", "symbols": ["SUB$string$4", "_", "ADJ", "_", "SUB$string$5"]},
+    {"name": "SUB$string$6", "symbols": [{"literal":"y"}, {"literal":"o"}, {"literal":"u"}, {"literal":"r"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SUB$string$7", "symbols": [{"literal":"p"}, {"literal":"e"}, {"literal":"r"}, {"literal":"s"}, {"literal":"o"}, {"literal":"n"}, {"literal":"a"}, {"literal":"l"}, {"literal":"i"}, {"literal":"t"}, {"literal":"y"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SUB", "symbols": ["SUB$string$6", "_", "ADJ", "_", "SUB$string$7"]},
+    {"name": "SUB$string$8", "symbols": [{"literal":"y"}, {"literal":"o"}, {"literal":"u"}, {"literal":"r"}, {"literal":" "}, {"literal":"t"}, {"literal":"e"}, {"literal":"a"}, {"literal":"m"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SUB", "symbols": ["SUB$string$8"]},
+    {"name": "SUB$string$9", "symbols": [{"literal":"t"}, {"literal":"h"}, {"literal":"e"}, {"literal":" "}, {"literal":"l"}, {"literal":"a"}, {"literal":"s"}, {"literal":"t"}, {"literal":" "}, {"literal":"c"}, {"literal":"o"}, {"literal":"m"}, {"literal":"p"}, {"literal":"a"}, {"literal":"n"}, {"literal":"y"}, {"literal":" "}, {"literal":"y"}, {"literal":"o"}, {"literal":"u"}, {"literal":" "}, {"literal":"w"}, {"literal":"o"}, {"literal":"r"}, {"literal":"k"}, {"literal":"e"}, {"literal":"d"}, {"literal":" "}, {"literal":"f"}, {"literal":"o"}, {"literal":"r"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SUB", "symbols": ["SUB$string$9"]},
+    {"name": "SUB$string$10", "symbols": [{"literal":"y"}, {"literal":"o"}, {"literal":"u"}, {"literal":"r"}, {"literal":" "}, {"literal":"b"}, {"literal":"o"}, {"literal":"s"}, {"literal":"s"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "SUB", "symbols": ["SUB$string$10"]},
+    {"name": "ADJ$string$1", "symbols": [{"literal":"i"}, {"literal":"n"}, {"literal":"t"}, {"literal":"e"}, {"literal":"r"}, {"literal":"e"}, {"literal":"s"}, {"literal":"t"}, {"literal":"i"}, {"literal":"n"}, {"literal":"g"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "ADJ", "symbols": ["ADJ$string$1"]},
+    {"name": "ADJ$string$2", "symbols": [{"literal":"i"}, {"literal":"m"}, {"literal":"p"}, {"literal":"r"}, {"literal":"e"}, {"literal":"s"}, {"literal":"s"}, {"literal":"i"}, {"literal":"v"}, {"literal":"e"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "ADJ", "symbols": ["ADJ$string$2"]},
+    {"name": "ADJ$string$3", "symbols": [{"literal":"u"}, {"literal":"n"}, {"literal":"d"}, {"literal":"e"}, {"literal":"r"}, {"literal":"q"}, {"literal":"u"}, {"literal":"a"}, {"literal":"l"}, {"literal":"i"}, {"literal":"f"}, {"literal":"i"}, {"literal":"e"}, {"literal":"d"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "ADJ", "symbols": ["ADJ$string$3"]},
+    {"name": "ADJ$string$4", "symbols": [{"literal":"l"}, {"literal":"a"}, {"literal":"c"}, {"literal":"k"}, {"literal":"i"}, {"literal":"n"}, {"literal":"g"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "ADJ", "symbols": ["ADJ$string$4"]},
+    {"name": "ADJ$string$5", "symbols": [{"literal":"a"}, {"literal":"m"}, {"literal":"a"}, {"literal":"z"}, {"literal":"i"}, {"literal":"n"}, {"literal":"g"}, {"literal":","}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "ADJ", "symbols": ["ADJ$string$5", "_", "ADJ"]},
+    {"name": "ADJ$string$6", "symbols": [{"literal":"t"}, {"literal":"e"}, {"literal":"r"}, {"literal":"r"}, {"literal":"i"}, {"literal":"b"}, {"literal":"l"}, {"literal":"e"}, {"literal":","}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "ADJ", "symbols": ["ADJ$string$6", "_", "ADJ"]},
+    {"name": "ADJ$string$7", "symbols": [{"literal":"i"}, {"literal":"n"}, {"literal":"t"}, {"literal":"e"}, {"literal":"r"}, {"literal":"e"}, {"literal":"s"}, {"literal":"t"}, {"literal":"i"}, {"literal":"n"}, {"literal":"g"}, {"literal":","}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "ADJ", "symbols": ["ADJ$string$7", "_", "ADJ"]},
+    {"name": "VERB$string$1", "symbols": [{"literal":"i"}, {"literal":"m"}, {"literal":"p"}, {"literal":"a"}, {"literal":"c"}, {"literal":"t"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "VERB", "symbols": ["VERB$string$1"]},
+    {"name": "VERB$string$2", "symbols": [{"literal":"c"}, {"literal":"h"}, {"literal":"a"}, {"literal":"n"}, {"literal":"g"}, {"literal":"e"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "VERB", "symbols": ["VERB$string$2"]},
+    {"name": "VERB$string$3", "symbols": [{"literal":"d"}, {"literal":"e"}, {"literal":"f"}, {"literal":"i"}, {"literal":"n"}, {"literal":"e"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "VERB", "symbols": ["VERB$string$3"]},
+    {"name": "VERB$string$4", "symbols": [{"literal":"e"}, {"literal":"x"}, {"literal":"p"}, {"literal":"l"}, {"literal":"a"}, {"literal":"i"}, {"literal":"n"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "VERB", "symbols": ["VERB$string$4"]},
+    {"name": "VERB$string$5", "symbols": [{"literal":"p"}, {"literal":"r"}, {"literal":"e"}, {"literal":"p"}, {"literal":"a"}, {"literal":"r"}, {"literal":"e"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "VERB", "symbols": ["VERB$string$5"]},
+    {"name": "OBJ$string$1", "symbols": [{"literal":"y"}, {"literal":"o"}, {"literal":"u"}, {"literal":"r"}, {"literal":" "}, {"literal":"r"}, {"literal":"e"}, {"literal":"s"}, {"literal":"p"}, {"literal":"o"}, {"literal":"n"}, {"literal":"s"}, {"literal":"i"}, {"literal":"b"}, {"literal":"i"}, {"literal":"l"}, {"literal":"i"}, {"literal":"t"}, {"literal":"i"}, {"literal":"e"}, {"literal":"s"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "OBJ", "symbols": ["OBJ$string$1"]},
+    {"name": "OBJ$string$2", "symbols": [{"literal":"t"}, {"literal":"h"}, {"literal":"e"}, {"literal":" "}, {"literal":"c"}, {"literal":"o"}, {"literal":"m"}, {"literal":"p"}, {"literal":"a"}, {"literal":"n"}, {"literal":"y"}, {"literal":" "}, {"literal":"c"}, {"literal":"u"}, {"literal":"l"}, {"literal":"t"}, {"literal":"u"}, {"literal":"r"}, {"literal":"e"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "OBJ", "symbols": ["OBJ$string$2"]},
+    {"name": "OBJ$string$3", "symbols": [{"literal":"y"}, {"literal":"o"}, {"literal":"u"}, {"literal":"r"}, {"literal":" "}, {"literal":"r"}, {"literal":"e"}, {"literal":"l"}, {"literal":"a"}, {"literal":"t"}, {"literal":"i"}, {"literal":"o"}, {"literal":"n"}, {"literal":"s"}, {"literal":"h"}, {"literal":"i"}, {"literal":"p"}, {"literal":"s"}, {"literal":" "}, {"literal":"w"}, {"literal":"i"}, {"literal":"t"}, {"literal":"h"}, {"literal":" "}, {"literal":"y"}, {"literal":"o"}, {"literal":"u"}, {"literal":"r"}, {"literal":" "}, {"literal":"c"}, {"literal":"o"}, {"literal":"l"}, {"literal":"l"}, {"literal":"e"}, {"literal":"a"}, {"literal":"g"}, {"literal":"u"}, {"literal":"e"}, {"literal":"s"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "OBJ", "symbols": ["OBJ$string$3"]},
+    {"name": "OBJ$string$4", "symbols": [{"literal":"y"}, {"literal":"o"}, {"literal":"u"}, {"literal":"r"}, {"literal":" "}, {"literal":"t"}, {"literal":"i"}, {"literal":"m"}, {"literal":"e"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "OBJ", "symbols": ["OBJ$string$4"]}
+]
+  , ParserStart: "MAIN"
+}
+if (typeof module !== 'undefined'&& typeof module.exports !== 'undefined') {
+   module.exports = grammar;
+} else {
+   window.grammar = grammar;
+}
+})();
