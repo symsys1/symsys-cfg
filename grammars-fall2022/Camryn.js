@@ -1,0 +1,86 @@
+// Generated automatically by nearley, version undefined
+// http://github.com/Hardmath123/nearley
+(function () {
+function id(x) { return x[0]; }
+var grammar = {
+    Lexer: undefined,
+    ParserRules: [
+    {"name": "MAIN", "symbols": ["SENTENCE", {"literal":"?","pos":6}]},
+    {"name": "SENTENCE", "symbols": ["NAME", {"literal":",","pos":14}, "QUESTION", "STATE", "NUMPEOPLE", "BEING", "PLACE"]},
+    {"name": "NAME$string$1", "symbols": [{"literal":"A"}, {"literal":"r"}, {"literal":"c"}, {"literal":"h"}, {"literal":"i"}, {"literal":"e"}, {"literal":"k"}, {"literal":"i"}, {"literal":"n"}, {"literal":"s"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "NAME", "symbols": ["NAME$string$1"]},
+    {"name": "NAME$string$2", "symbols": [{"literal":"R"}, {"literal":"o"}, {"literal":"n"}, {"literal":"n"}, {"literal":"i"}, {"literal":"e"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "NAME", "symbols": ["NAME$string$2"]},
+    {"name": "NAME$string$3", "symbols": [{"literal":"T"}, {"literal":"h"}, {"literal":"e"}, {"literal":" "}, {"literal":"s"}, {"literal":"e"}, {"literal":"r"}, {"literal":"p"}, {"literal":"e"}, {"literal":"n"}, {"literal":"t"}, {"literal":" "}, {"literal":"q"}, {"literal":"u"}, {"literal":"e"}, {"literal":"e"}, {"literal":"n"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "NAME", "symbols": ["NAME$string$3"]},
+    {"name": "NAME$string$4", "symbols": [{"literal":"J"}, {"literal":"u"}, {"literal":"g"}, {"literal":"h"}, {"literal":"e"}, {"literal":"a"}, {"literal":"d"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "NAME", "symbols": ["NAME$string$4"]},
+    {"name": "NAME$string$5", "symbols": [{"literal":"T"}, {"literal":"o"}, {"literal":"p"}, {"literal":"a"}, {"literal":"z"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "NAME", "symbols": ["NAME$string$5"]},
+    {"name": "NAME$string$6", "symbols": [{"literal":"M"}, {"literal":"i"}, {"literal":"j"}, {"literal":"a"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "NAME", "symbols": ["NAME$string$6"]},
+    {"name": "NAME$string$7", "symbols": [{"literal":"B"}, {"literal":"e"}, {"literal":"t"}, {"literal":"t"}, {"literal":"y"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "NAME", "symbols": ["NAME$string$7"]},
+    {"name": "NAME$string$8", "symbols": [{"literal":"S"}, {"literal":"e"}, {"literal":"r"}, {"literal":"p"}, {"literal":"e"}, {"literal":"n"}, {"literal":"t"}, {"literal":" "}, {"literal":"k"}, {"literal":"i"}, {"literal":"n"}, {"literal":"g"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "NAME", "symbols": ["NAME$string$8"]},
+    {"name": "NAME$string$9", "symbols": [{"literal":"D"}, {"literal":"e"}, {"literal":"a"}, {"literal":"d"}, {"literal":" "}, {"literal":"J"}, {"literal":"a"}, {"literal":"s"}, {"literal":"o"}, {"literal":"n"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "NAME", "symbols": ["NAME$string$9"]},
+    {"name": "NAME$string$10", "symbols": [{"literal":"C"}, {"literal":"h"}, {"literal":"e"}, {"literal":"r"}, {"literal":"l"}, {"literal":"y"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "NAME", "symbols": ["NAME$string$10"]},
+    {"name": "NAME$string$11", "symbols": [{"literal":"F"}, {"literal":"a"}, {"literal":"n"}, {"literal":"g"}, {"literal":"s"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "NAME", "symbols": ["NAME$string$11"]},
+    {"name": "NAME$string$12", "symbols": [{"literal":"F"}, {"literal":"o"}, {"literal":"r"}, {"literal":"s"}, {"literal":"y"}, {"literal":"t"}, {"literal":"h"}, {"literal":"e"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "NAME", "symbols": ["NAME$string$12"]},
+    {"name": "QUESTION$string$1", "symbols": [{"literal":" "}, {"literal":"w"}, {"literal":"h"}, {"literal":"o"}, {"literal":" "}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "QUESTION", "symbols": ["QUESTION$string$1"]},
+    {"name": "QUESTION$string$2", "symbols": [{"literal":" "}, {"literal":"w"}, {"literal":"h"}, {"literal":"a"}, {"literal":"t"}, {"literal":" "}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "QUESTION", "symbols": ["QUESTION$string$2"]},
+    {"name": "QUESTION$string$3", "symbols": [{"literal":" "}, {"literal":"w"}, {"literal":"h"}, {"literal":"e"}, {"literal":"r"}, {"literal":"e"}, {"literal":" "}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "QUESTION", "symbols": ["QUESTION$string$3"]},
+    {"name": "QUESTION$string$4", "symbols": [{"literal":" "}, {"literal":"w"}, {"literal":"h"}, {"literal":"e"}, {"literal":"n"}, {"literal":" "}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "QUESTION", "symbols": ["QUESTION$string$4"]},
+    {"name": "QUESTION$string$5", "symbols": [{"literal":" "}, {"literal":"w"}, {"literal":"h"}, {"literal":"y"}, {"literal":" "}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "QUESTION", "symbols": ["QUESTION$string$5"]},
+    {"name": "STATE$string$1", "symbols": [{"literal":"a"}, {"literal":"r"}, {"literal":"e"}, {"literal":" "}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "STATE", "symbols": ["STATE$string$1"]},
+    {"name": "STATE$string$2", "symbols": [{"literal":"w"}, {"literal":"e"}, {"literal":"r"}, {"literal":"e"}, {"literal":" "}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "STATE", "symbols": ["STATE$string$2"]},
+    {"name": "NUMPEOPLE$string$1", "symbols": [{"literal":"y"}, {"literal":"o"}, {"literal":"u"}, {"literal":" "}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "NUMPEOPLE", "symbols": ["NUMPEOPLE$string$1"]},
+    {"name": "NUMPEOPLE$string$2", "symbols": [{"literal":"t"}, {"literal":"h"}, {"literal":"e"}, {"literal":"y"}, {"literal":" "}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "NUMPEOPLE", "symbols": ["NUMPEOPLE$string$2"]},
+    {"name": "NUMPEOPLE$string$3", "symbols": [{"literal":"y"}, {"literal":"o"}, {"literal":"u"}, {"literal":" "}, {"literal":"a"}, {"literal":"l"}, {"literal":"l"}, {"literal":" "}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "NUMPEOPLE", "symbols": ["NUMPEOPLE$string$3"]},
+    {"name": "BEING$string$1", "symbols": [{"literal":"s"}, {"literal":"i"}, {"literal":"n"}, {"literal":"g"}, {"literal":"i"}, {"literal":"n"}, {"literal":"g"}, {"literal":" "}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "BEING", "symbols": ["BEING$string$1"]},
+    {"name": "BEING$string$2", "symbols": [{"literal":"r"}, {"literal":"i"}, {"literal":"d"}, {"literal":"i"}, {"literal":"n"}, {"literal":"g"}, {"literal":" "}, {"literal":"a"}, {"literal":" "}, {"literal":"m"}, {"literal":"o"}, {"literal":"t"}, {"literal":"o"}, {"literal":"r"}, {"literal":"c"}, {"literal":"y"}, {"literal":"c"}, {"literal":"l"}, {"literal":"e"}, {"literal":" "}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "BEING", "symbols": ["BEING$string$2"]},
+    {"name": "BEING$string$3", "symbols": [{"literal":"r"}, {"literal":"a"}, {"literal":"i"}, {"literal":"d"}, {"literal":"i"}, {"literal":"n"}, {"literal":"g"}, {"literal":" "}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "BEING", "symbols": ["BEING$string$3"]},
+    {"name": "BEING$string$4", "symbols": [{"literal":"e"}, {"literal":"a"}, {"literal":"t"}, {"literal":"i"}, {"literal":"n"}, {"literal":"g"}, {"literal":" "}, {"literal":"a"}, {"literal":" "}, {"literal":"b"}, {"literal":"u"}, {"literal":"r"}, {"literal":"g"}, {"literal":"e"}, {"literal":"r"}, {"literal":" "}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "BEING", "symbols": ["BEING$string$4"]},
+    {"name": "BEING$string$5", "symbols": [{"literal":"p"}, {"literal":"l"}, {"literal":"a"}, {"literal":"y"}, {"literal":"i"}, {"literal":"n"}, {"literal":"g"}, {"literal":" "}, {"literal":"t"}, {"literal":"h"}, {"literal":"e"}, {"literal":" "}, {"literal":"g"}, {"literal":"u"}, {"literal":"i"}, {"literal":"t"}, {"literal":"a"}, {"literal":"r"}, {"literal":" "}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "BEING", "symbols": ["BEING$string$5"]},
+    {"name": "BEING$string$6", "symbols": [{"literal":"m"}, {"literal":"u"}, {"literal":"r"}, {"literal":"d"}, {"literal":"e"}, {"literal":"r"}, {"literal":"i"}, {"literal":"n"}, {"literal":"g"}, {"literal":" "}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "BEING", "symbols": ["BEING$string$6"]},
+    {"name": "BEING$string$7", "symbols": [{"literal":"r"}, {"literal":"u"}, {"literal":"n"}, {"literal":"n"}, {"literal":"i"}, {"literal":"n"}, {"literal":"g"}, {"literal":" "}, {"literal":"f"}, {"literal":"o"}, {"literal":"r"}, {"literal":" "}, {"literal":"c"}, {"literal":"l"}, {"literal":"a"}, {"literal":"s"}, {"literal":"s"}, {"literal":" "}, {"literal":"p"}, {"literal":"r"}, {"literal":"e"}, {"literal":"s"}, {"literal":"i"}, {"literal":"d"}, {"literal":"e"}, {"literal":"n"}, {"literal":"t"}, {"literal":" "}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "BEING", "symbols": ["BEING$string$7"]},
+    {"name": "PLACE$string$1", "symbols": [{"literal":"a"}, {"literal":"t"}, {"literal":" "}, {"literal":"s"}, {"literal":"c"}, {"literal":"h"}, {"literal":"o"}, {"literal":"o"}, {"literal":"l"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "PLACE", "symbols": ["PLACE$string$1"]},
+    {"name": "PLACE$string$2", "symbols": [{"literal":"a"}, {"literal":"t"}, {"literal":" "}, {"literal":"P"}, {"literal":"o"}, {"literal":"p"}, {"literal":"'"}, {"literal":"s"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "PLACE", "symbols": ["PLACE$string$2"]},
+    {"name": "PLACE$string$3", "symbols": [{"literal":"a"}, {"literal":"t"}, {"literal":" "}, {"literal":"t"}, {"literal":"h"}, {"literal":"e"}, {"literal":" "}, {"literal":"W"}, {"literal":"h"}, {"literal":"y"}, {"literal":"t"}, {"literal":"e"}, {"literal":" "}, {"literal":"W"}, {"literal":"y"}, {"literal":"r"}, {"literal":"m"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "PLACE", "symbols": ["PLACE$string$3"]},
+    {"name": "PLACE$string$4", "symbols": [{"literal":"i"}, {"literal":"n"}, {"literal":" "}, {"literal":"a"}, {"literal":"r"}, {"literal":"c"}, {"literal":"h"}, {"literal":"i"}, {"literal":"e"}, {"literal":"'"}, {"literal":"s"}, {"literal":" "}, {"literal":"g"}, {"literal":"a"}, {"literal":"r"}, {"literal":"a"}, {"literal":"g"}, {"literal":"e"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "PLACE", "symbols": ["PLACE$string$4"]},
+    {"name": "PLACE$string$5", "symbols": [{"literal":"i"}, {"literal":"n"}, {"literal":" "}, {"literal":"S"}, {"literal":"u"}, {"literal":"n"}, {"literal":"n"}, {"literal":"y"}, {"literal":"S"}, {"literal":"i"}, {"literal":"d"}, {"literal":"e"}, {"literal":" "}, {"literal":"t"}, {"literal":"r"}, {"literal":"a"}, {"literal":"i"}, {"literal":"l"}, {"literal":"e"}, {"literal":"r"}, {"literal":" "}, {"literal":"p"}, {"literal":"a"}, {"literal":"r"}, {"literal":"k"}], "postprocess": function joiner(d) {return d.join('');}},
+    {"name": "PLACE", "symbols": ["PLACE$string$5"]}
+]
+  , ParserStart: "MAIN"
+}
+if (typeof module !== 'undefined'&& typeof module.exports !== 'undefined') {
+   module.exports = grammar;
+} else {
+   window.grammar = grammar;
+}
+})();
