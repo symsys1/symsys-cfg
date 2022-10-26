@@ -49,7 +49,7 @@ var grammars = [
 {name:"49. StanfordStudentAthlete (Malia, Andrea and Astrid)", fileName:"./grammars-fall2022/Malia_Andrea_Astrid_StanfordStudentAthlete.js"},
 {name:"50. stanford2026bios (Claudia)", fileName:"./grammars-fall2022/Claudia_stanford2026bios.js.js"},
 {name:"51. Stanford XTRM (Emily)", fileName:"./grammars-fall2022/Emily_StanfordXTRM.js"},
-{name:"52. Stanford Tourists (Jerry)", fileName:"./grammars-fall2022/DrewBowserStrength Coach/Athlete Weightlifting.js"},
+{name:"52. Stanford Tourists (Jerry)", fileName:"./grammars-fall2022/DrewBowserStrength Coach:Athlete Weightlifting.js"},
 {name:"53. Stanford Student Talk (Alexandra)", fileName:"./grammars-fall2022/Alexandra Stanford Student Talk CFG.js"},
 {name:"54. Stanford Fizz (Kirsten and Avantika)", fileName:"./grammars-fall2022/Kirsten_Avantika_Fizz.js"},
 {name:"55. Stanford Directions (Joseph)", fileName:"./grammars-fall2022/Joseph_Stanford_Directions.js"},
