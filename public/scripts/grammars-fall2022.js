@@ -151,6 +151,8 @@ var grammars = [
 {name:"153. ? (Lucy)", fileName:"./grammars-fall2022/lucykw.js"},
 {name:"154. Stereotypical Stanford CS Student (Jenny, Lila)", fileName:"./grammars-fall2022/Jenny_Lila.js"},
 {name:"155. ? (Fara, Grace, Tunde)", fileName:"./grammars-fall2022/Fara, Grace, Tunde.js"},
+{name:"156. Bieber Tweets (Singh)", fileName:"./grammars-fall2022/grammar 2022-10-25 02.07.03.js"},
+{name:"157. TTC (Nathan)", fileName:"./grammars-fall2022/Nathan_TTC.js"},
 ];
 
 let grammarForm = document.getElementById("grammarForm");
