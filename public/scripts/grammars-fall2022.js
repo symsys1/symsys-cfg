@@ -125,7 +125,6 @@ var grammars = [
 {name:"126. Edna Mode (Marielle)", fileName:"./grammars-fall2022/Marielle_EdnaMode.js"},
 {name:"127. Edna (Satya)", fileName:"./grammars-fall2022/Satya_Vargas_Edna.js"},
 {name:"128. Duolingo Notification Bot (Ayana and Josiah)", fileName:"./grammars-fall2022/Ayana_Josiah_DuolingoNotificationBot.js"},
-{name:"129. Drew Bowser. Strength Coach/Athlete Weightlifting", fileName:"./grammars-fall2022/Kwame_Ocran_Tiffany_Pollard_Bot.js"},
 {name:"130. Dory (Brooke and Cameron)", fileName:"./grammars-fall2022/Brooke_Cameron_Dory.js"},
 {name:"131. Donald Trump's Linguistic Patterns(Sungbin, Nathan, Felix)", fileName:"./grammars-fall2022/Sungbin, Nathan, Felix Donald Trump's Linguistic Patterns.js"},
 {name:"132. Donald Trump (Josh and Max)", fileName:"./grammars-fall2022/Josh_Max_DonaldTrump.js"},
