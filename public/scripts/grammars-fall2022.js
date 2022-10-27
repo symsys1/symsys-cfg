@@ -149,7 +149,7 @@ var grammars = [
 {name:"151. Album Reviews of the Century (Ursula and Samantha and Nils)", fileName:"./grammars-fall2022/Samantha Nils Ursula Album Reviews of the Century.js"},
 {name:"152. Abby Lee Miller (Malaysia)", fileName:"./grammars-fall2022/Malaysia_AbbyLeeMiller.js"},
 {name:"153. ? (Lucy)", fileName:"./grammars-fall2022/lucykw.js"},
-{name:"154. ? (Jenny, Lila)", fileName:"./grammars-fall2022/Jenny_Lila.js"},
+{name:"154. Stereotypical Stanford CS Student (Jenny, Lila)", fileName:"./grammars-fall2022/Jenny_Lila.js"},
 {name:"155. ? (Fara, Grace, Tunde)", fileName:"./grammars-fall2022/Fara, Grace, Tunde.js"},
 ];
 
