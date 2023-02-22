@@ -1,5 +1,7 @@
 # Context Free Grammar Gallery
 
+See this repo running at: https://symsys1.jennylihan.repl.co
+
 This is a website that takes context-free grammars that students have built using this [Nearley Parser Playground](https://omrelli.ug/nearley-playground/) and uses the [nearley npm package](https://www.npmjs.com/package/nearley) to generate sentences from each grammar as well as Web Speech API for text-to-speech fun.
 
 I built this as a gallery of student work for [this assignment](https://docs.google.com/document/d/1Ld3np4gpDrVmVDXXdS4xg0Z5-_5ICO3Rig-dVE5M-z4/edit?usp=sharing) that I also wrote for symsys1! 
